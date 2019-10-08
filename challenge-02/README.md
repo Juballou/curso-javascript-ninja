@@ -5,7 +5,7 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
 function soma (x,y){
-return x + y;
+  return x + y;
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
@@ -23,8 +23,8 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
 Onde VALOR é o novo valor da variável.
 */
 function adicionar(){
-nova = 14;
-return 'O valor da variável agora é ' + nova;
+  nova = 14;
+  return 'O valor da variável agora é ' + nova;
 }
 
 // Invoque a função criada acima.
@@ -41,12 +41,11 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function multiplicação (a, b, c){
-if(a=== undefined || b === undefined || c === undefined){
- return 'Preencha todos os valores corretamente!';
-}
-else {
-return ((a * b * c) + 2);
-}
+  if(a=== undefined || b === undefined || c === undefined){
+  return 'Preencha todos os valores corretamente!';
+  } else {
+    return ((a * b * c) + 2);
+  }
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
@@ -70,8 +69,24 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function calcular (a, b, c){
+  if(a !== undefined && b === undefined && c === undefined){
+    return a;
+  } else if (a !== undefined && b !== undefined && c === undefined){
+    return a + b;
+  } else if ( a !== undefined && b !== undefined && c !== undefined){
+    return (a+b) / c;
+  } else if (a === undefined && b === undefined && c === undefined){
+    return false;
+  } else {
+    return null;
+  }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+calcular (); //false
+calcular (1); //1
+calcular (1,2); //3
+calcular (1,2,3); //1
+
 ```
